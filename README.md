@@ -13,7 +13,6 @@ The selected values should be interpreted as **scenario-specific experimental se
 - [5. BA: blinding distance](#5-ba-blinding-distance)
 - [6. AVA: attack gain and phase](#6-ava-attack-gain-and-phase)
 - [7. MA: delay and ghost-source offset](#7-ma-delay-and-ghost-source-offset)
-- [8. Overall observations](#8-overall-observations)
 
 ## 1. Experimental protocol
 
@@ -177,11 +176,4 @@ The adopted MA configuration—`tau_d = 9 s` and offset `i−1`—combines a rep
 
 The absence of collisions under MA, despite collisions under DPDA alone in Scenario IV, illustrates a nonlinear closed-loop interaction rather than a general reduction in risk from combining attacks. PA introduces a lower-acceleration tendency, while DPDA mainly introduces delayed responses. In the tested IDM-controlled system, the conservative acceleration tendency limited rapid gap closure, and the car-following feedback gradually compensated for state deviations caused by the delayed information. Consequently, the two effects did not combine additively, and MA produced a less severe collision outcome than DPDA alone. This result is scenario-dependent and should not be generalized to other hybrid attacks or traffic conditions.
 
-## 8. Overall observations
-
-1. **Spatial adjacency matters.** Scenario IV was consistently the most affected spatial configuration; under DPDA, it changed the outcome from collision-free to a 100% collision rate.
-2. **Responses are not always monotonic.** Larger AVA gains did not uniformly increase the disturbance metrics, and MA did not simply inherit the collision outcome of DPDA.
-3. **Parameter choice requires both outcome and feasibility considerations.** The PA and MA source offset `i−1` was retained because it was both the most influential and the least demanding tested mismatch to implement.
-4. **The BA setting marks an empirical regime boundary.** A 50 m blinding distance was the smallest tested value that produced collisions across every ACC-parameterization–spatial-configuration combination.
-5. **The conclusions are bounded by the experiment.** All retained parameters are representative settings for this controlled ring-road simulation and should not be interpreted as universal cyberattack thresholds.
 
